@@ -723,3 +723,194 @@ a {
 }
 
 /*! responsive end  */
+
+
+/* Login ve Register Form Stilleri */
+.login-form {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--main-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  transform: skewX(-15deg);
+}
+
+.login-form form {
+  max-width: 400px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+}
+
+.login-form .heading {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 3.5rem;
+  color: var(--black-color);
+  border: none;
+}
+
+.login-form .heading span {
+  color: var(--main-color);
+}
+
+.login-form .input-box {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.login-form .input-box i {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--main-color);
+  font-size: 1.8rem;
+  transition: 0.3s;
+}
+
+.login-form .input-box input {
+  width: 100%;
+  padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+  font-size: 1.6rem;
+  border: 0.2rem solid #eee;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  transition: 0.3s;
+}
+
+.login-form .input-box input:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 1rem rgba(232, 66, 66, 0.1);
+}
+
+.login-form .input-box input:focus + i {
+  color: var(--main-color);
+}
+
+.login-form .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+.login-form .remember-forgot label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--black-color);
+  cursor: pointer;
+}
+
+.login-form .remember-forgot a {
+  color: var(--main-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login-form .remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.login-form .btn {
+  width: 100%;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  background: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form .btn:hover {
+  background: #d63030;
+  transform: translateY(-2px);
+}
+
+.login-form .register-link {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  color: var(--black-color);
+}
+
+.login-form .register-link a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.login-form .register-link a:hover {
+  text-decoration: underline;
+}
+
+.login-form .terms {
+  margin: 2rem 0;
+}
+
+.login-form .terms label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  color: var(--black-color);
+  cursor: pointer;
+}
+
+.login-form .terms label input[type="checkbox"] {
+  width: 1.8rem;
+  height: 1.8rem;
+  accent-color: var(--main-color);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 450px) {
+  .login-form form {
+      padding: 2.5rem;
+      margin: 1rem;
+  }
+  
+  .login-form .heading {
+      font-size: 2.8rem;
+      margin-bottom: 3rem;
+  }
+  
+  .login-form .input-box input {
+      font-size: 1.4rem;
+      padding: 1.2rem 1.2rem 1.2rem 4rem;
+  }
+  
+  .login-form .input-box i {
+      font-size: 1.6rem;
+  }
+  
+  .login-form .btn {
+      font-size: 1.6rem;
+      padding: 1.2rem;
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap | Food Website</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Login Form Section -->
+<section class="login-form">
+    <h1 class="heading">Giriş <span>Yap</span></h1>
+    <form id="loginForm">
+        <div class="input-box">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" placeholder="E-posta adresiniz" required>
+        </div>
+        <div class="input-box">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" placeholder="Şifreniz" required>
+        </div>
+        <div class="remember-forgot">
+            <label><input type="checkbox"> Beni hatırla</label>
+            <a href="#">Şifremi unuttum</a>
+        </div>
+        <button type="submit" class="btn">Giriş Yap</button>
+        <div class="register-link">
+            Hesabınız yok mu? <a href="register.html">Kayıt Ol</a>
+        </div>
+    </form>
+</section>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    
+    // Burada login işlemleri yapılacak
+    console.log('Giriş denemesi:', { email, password });
+    // API entegrasyonu buraya eklenebilir
+});
+</script>
+
+</body>
+</html> 
